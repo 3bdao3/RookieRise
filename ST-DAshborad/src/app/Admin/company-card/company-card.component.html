@@ -1,0 +1,28 @@
+<article class="company-card" role="article" aria-label="{{ company.nameEn }}">
+    <div class="logo-wrapper">
+        <img [src]="getLogoUrl()" [alt]="company.nameEn + ' logo'" loading="lazy" (error)="onImageError($event)" />
+    </div>
+
+    <div class="card-body">
+        <h3 class="name-ar">{{ company.nameAr }}</h3>
+        <p class="name-en">{{ company.nameEn }}</p>
+
+        <p class="employee-count">
+            EmployeeCount: <strong>{{ company.employeeCount ?? ' ' }}</strong>
+        </p>
+        <p class="Email">
+            Email: <strong>{{ company.email?? ' ' }}</strong>
+
+        </p>
+
+        <p *ngIf="company.websiteUrl" class="website">
+            <a [href]="company.websiteUrl" target="_blank" rel="noopener noreferrer">vistweb </a>
+        </p>
+    </div>
+
+    <div class="card-footer">
+        <button (click)="onViewDetails()" aria-label="View details for {{ company.nameEn }}">
+      View Details
+    </button>
+    </div>
+</article>

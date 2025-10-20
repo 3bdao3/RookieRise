@@ -1,0 +1,32 @@
+<header class="navbar navbar-expand-lg bg-white border-bottom fixed-top shadow-sm">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <!-- Placeholder علشان العنوان يبقى في النص -->
+            <div style="width: 40px;"></div>
+
+            <div class="mx-auto text-center">
+                <span class="navbar-brand fs-3 fw-bold m-0">Rookierise Admin Panel</span>
+            </div>
+            <div *ngIf="adminEmail; else guest" class="dropdown me-2">
+                <a id="userMenuButton" class="nav-link dropdown-toggle text-dark fw-semibold d-flex align-items-center gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img [src]="profileImage" alt="Profile" class="profile-img rounded-circle" /> {{ adminEmail }}
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userMenuButton">
+                    <li>
+                        <a class="dropdown-item" routerLink="/change-password">🔒 Change Password</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                        <a class="dropdown-item text-danger" (click)="logout()">🚪 Logout</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ng-template #guest>
+                <span class="text-muted">Guest</span>
+            </ng-template>
+        </div>
+    </div>
+</header>

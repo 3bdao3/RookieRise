@@ -1,0 +1,15 @@
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+app-sidebar {
+    flex: 0 0 250px;
+}
+
+.main-content {
+    flex: 1;
+    background: #f1f5f9;
+    padding: 20px;
+    margin-top: 40px;
+}

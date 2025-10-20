@@ -1,0 +1,97 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #121212;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    .title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 600;
+        text-align: center;
+        color: #f1f1f1;
+    }
+    .login-card {
+        background: #1e1e1e;
+        padding: 2rem 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        width: 100%;
+        max-width: 400px;
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+            color: #f1f1f1;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1rem;
+                input[type='email'],
+                input[type='password'] {
+                    padding: 0.8rem 1rem;
+                    border: 1px solid #333;
+                    border-radius: 8px;
+                    background: #2a2a2a;
+                    color: #fff;
+                    font-size: 0.95rem;
+                    outline: none;
+                    transition: border 0.2s ease;
+                    &:focus {
+                        border-color: #007bff;
+                    }
+                }
+                label {
+                    font-size: 0.9rem;
+                    margin-bottom: 0.3rem;
+                    color: #bbb;
+                }
+                .error {
+                    color: #ff5c5c;
+                    font-size: 0.8rem;
+                    margin-top: 0.3rem;
+                }
+            }
+            button {
+                padding: 0.9rem;
+                background: #007bff;
+                border: none;
+                border-radius: 8px;
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 500;
+                cursor: pointer;
+                transition: background 0.2s ease;
+                &:hover:not(:disabled) {
+                    background: #0056b3;
+                }
+                &:disabled {
+                    background: #555;
+                    cursor: not-allowed;
+                }
+            }
+            .forgot-password {
+                margin-top: 1rem;
+                text-align: right;
+                a {
+                    color: #007bff;
+                    font-size: 0.9rem;
+                    text-decoration: none;
+                    transition: color 0.2s ease;
+                    &:hover {
+                        color: #3399ff;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
