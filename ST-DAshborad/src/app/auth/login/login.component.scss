@@ -54,6 +54,7 @@ html, body {
   max-width: 750px;
   height: auto;
   display: block;
+  transition: all 0.3s ease;
 }
 
 .login-card {
@@ -183,6 +184,7 @@ input:focus {
   justify-content: space-between;
   margin-bottom: 1.2rem;
   gap: 10px;
+  flex-direction: row; 
 }
 
 .toggle-container {
@@ -261,22 +263,8 @@ button[type="submit"]:hover {
   background-color: #702ae4;
 }
 
-@media (max-width: 768px) {
-  .login-card {
-    max-width: 90%;
-    padding: 1.8rem;
-  }
 
-  .login-title {
-    font-size: 1.6rem;
-  }
-
-  .language-dropdown {
-    font-size: 0.85rem;
-    padding: 4px 8px;
-    min-width: 80px;
-  }
-
+@media (max-width: 600px) {
   .remember-forgot-container {
     flex-direction: column;
     align-items: flex-start;
@@ -287,14 +275,38 @@ button[type="submit"]:hover {
     align-self: flex-start;
     font-size: 0.85rem;
   }
+
+  .rookie-rise-logo {
+    max-width: 380px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 601px) and (max-width: 1024px) {
   .remember-forgot-container {
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .forgot-link {
-    align-self: flex-start;
+    font-size: 0.9rem;
+  }
+
+  .rookie-rise-logo {
+    width: 100%;
+    max-width: 750px; 
+    display: block;
+    margin-bottom: 1.8rem;
+  }
+
+  .login-card {
+    max-width: 750px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .rookie-rise-logo {
+    max-width: 750px;
   }
 }
